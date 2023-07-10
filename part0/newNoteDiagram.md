@@ -9,6 +9,11 @@ sequenceDiagram
     server-->>browser: redirect URL (code 302)
     deactivate server
 
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: the html file
+    deactivate server
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
     server-->>browser: the css file
